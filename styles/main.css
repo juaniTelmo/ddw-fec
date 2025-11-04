@@ -25,7 +25,7 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-
+  font-family: 'Contrail One', sans-serif !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,15 +41,13 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.header, 
-.header * {
-  font-family: 'Contrail One', sans-serif !important;
-}
-
 
 .logo {
   height: 48px;
   border-radius: 6px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color:var(--prim) ;
 }
 
 .menu ul {

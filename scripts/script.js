@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mImg.src = img || '../images/placeholder.jpg';
     mImg.alt = titulo || 'Imagen relacionada';
     mTxt.innerHTML = generateText(titulo, txt);
-    mVer.href = link || '#';
+    mVer.href = link || '#';  // Si no se proporciona link, el botón "Ver más" no tendrá acción
     overlay.classList.add('show');
     overlay.setAttribute('aria-hidden', 'false');
     modal.focus();
@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
       openModal({
         titulo: `${item.dataset.year || ''} — ${item.querySelector('.time-title')?.textContent || ''}`,
         img: item.dataset.img,
-        txt: item.dataset.txt
+        txt: item.dataset.txt,
+        link: item.querySelector('.ver-mas')?.dataset.link  // Aquí capturamos el link del botón "Ver más"
       });
     });
   });
