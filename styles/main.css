@@ -385,45 +385,267 @@ footer {
   color: var(--fondo);
   border-top: 3px solid var(--ac);
 }
-
-/* ===== responsive ===== */
-@media (max-width: 1200px) {
-  .contenido {
-    padding: 90px 16px 50px;
-  }
-  .col-2 {
-    grid-template-columns: 1fr;
-  }
-  .portada-fig {
-    height: 350px;
-  }
+/* ==== POLITICA ==== */
+.grid-politica {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-@media (max-width: 900px) {
-  .grid-seccion {
-    grid-template-columns: 1fr;
-  }
-  .cuadro-img img {
-    height: 200px;
-  }
-  .modal {
-    grid-template-columns: 1fr;
-    max-height: 80vh;
-    overflow: auto;
-  }
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@media (max-width: 600px) {
-  .titulo {
-    font-size: 32px;
-  }
-  .sub {
-    font-size: 22px;
-  }
-  .portada-fig {
-    height: 280px;
-  }
-  .galeria-tematica img {
-    height: 200px;
-  }
+.texto-politica {
+  background-color: var(--prim);
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--osc);
+}
+
+#seccion2 figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+/* === MODA === */
+.moda {
+  background-color: var(--prim);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.moda h2 {
+  color: var(--osc);
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.grid-moda {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c b"
+    "c d";
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radio);
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.item figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 5px;
+  width: 100%;
+}
+
+.grande { grid-area: a; }
+.chico { grid-area: b; }
+.vertical { grid-area: c; }
+.ancho { grid-area: d; }
+
+.texto-moda {
+  color: var(--osc);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+/* ===== SECCIÓN SOCIEDAD NUEVA ===== */
+.sociedad-nueva {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.sociedad-nueva .titulo-sec {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+.sociedad-fondo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+
+.soc-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* tarjeta central */
+.soc-texto-tarjeta {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  text-align: justify;
+  color: var(--osc);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* collage diagonal */
+.soc-collage.arco {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.soc-collage figure {
+  position: absolute;
+  width: 170px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.soc-collage figure:hover {
+  transform: scale(1.05);
+}
+
+.img-izq-arriba { top: 10%; left: 8%; transform: rotate(-6deg); }
+.img-der-medio { top: 45%; right: 10%; transform: rotate(4deg); }
+.img-izq-abajo { bottom: 10%; left: 12%; transform: rotate(-3deg); }
+
+.soc-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.soc-collage figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 3px 0;
+}
+/* economia */
+.seccion-economia-rect {
+  background: linear-gradient(90deg, #f0f0e0, #e0deb0);
+  padding: 60px 40px;
+  border-radius: 16px;
+}
+
+.seccion-economia-rect .titulo-sec {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #12263A;
+}
+
+.rectangulo-economia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.texto-economia {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding: 20px;
+  background: #F4EDAE;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.rectangulo-economia figure {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.rectangulo-economia figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rectangulo-economia figure:hover {
+  transform: scale(1.05);
+}
+
+.rectangulo-economia figure:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.rectangulo-economia figure:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.rectangulo-economia figure:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.rectangulo-economia figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(18, 38, 58, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
 }
