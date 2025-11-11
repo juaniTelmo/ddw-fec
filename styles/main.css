@@ -136,7 +136,8 @@ header {
 .m-acciones { display: flex; gap: 10px; margin-top: 12px; }
 .m-acciones .btn { background: var(--ac); color: #fff; padding: 8px 14px; border-radius: 8px; border: none; text-decoration: none; }
 .m-acciones .cerrar-sec { background: var(--prim); color: var(--osc); }
-
+.m-acciones .btn:hover { background: #ad1e0b; }
+.m-acciones .cerrar-sec:hover { background: #c1d2cb;  }
 /* ===== GALERÍA DISRUPTIVA 2010s ===== */
 .galeria-tematica {  display: flex;  flex-direction: column;  gap: 60px;  margin-top: 30px;}
 
@@ -226,9 +227,8 @@ footer {
 #seccion2 .titulo-sec::after {  content: "";  position: absolute;  bottom: -10px;  left: 50%;  transform: translateX(-50%);  
   width: 80px;  height: 5px;  background: var(--ac); border-radius: 4px;}
 
-/* ===== ESTRUCTURA DE TRES COLUMNAS ===== */
 .grid-politica {  display: grid;  grid-template-columns: 1fr 1.3fr 1fr;  gap: 2rem;  align-items: start;}
-/* columnas */
+
 .columna {  display: flex;  flex-direction: column;  gap: 1.25rem;}
 
 #seccion2 figure {  position: relative;  overflow: hidden;  border-radius: var(--radio);  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -247,7 +247,6 @@ footer {
   font-size: 0.9rem;  text-align: center;  padding: 8px 10px;  letter-spacing: 0.3px;  font-weight: 500;
 }
 
-/* ===== TEXTO CENTRAL ===== */
 .texto-politica {
   background: linear-gradient(180deg, #ffffff, #f4edafc2);  border-left: 6px solid var(--ac);  border-radius: 16px;  
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.1);  padding: 1.8rem;  font-size: 1.05rem;  line-height: 1.7;  color: var(--osc); 
@@ -268,13 +267,13 @@ footer {
 .grande { grid-area: a; } .chico { grid-area: b; } .vertical { grid-area: c; } .ancho { grid-area: d; }
 .texto-moda { color: var(--osc); max-width: 800px; margin: 0 auto; line-height: 1.5; font-size: 1rem; }
 
-/* ===== SOCIEDAD NUEVA ===== */
+/* ===== SOCIEDAD ===== */
 .sociedad { position: relative; overflow: hidden; padding: 0; }
 .sociedad .titulo-sec {
   position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
   color: #fff; font-size: 2.4rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.8); z-index: 5;
 }
-.sociedad-fondo { position: relative; display: flex; justify-content: center; align-items: center; min-height: 85vh; }
+.sociedad-fondo { position: relative; display: flex; justify-content: center; align-items: center; min-height: 85vh; padding: 1rem ;}
 .soc-fondo { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45); position: absolute; top: 0; left: 0; z-index: 1; }
 .soc-texto-tarjeta {
   position: relative; z-index: 2; background: rgba(255,255,255,0.9);
