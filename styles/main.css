@@ -12,11 +12,14 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Monomaniac One', system-ui, sans-serif;
+  font-family: 'Monomaniac One', 
+  system-ui, sans-serif; 
   background: var(--fondo);
   color: var(--osc);
-  line-height: 1.5;
+  line-height: 1.5; 
   min-height: 100vh;
+  height: 100%;
+
 }
 
 /* ===== HEADER ===== */
@@ -41,8 +44,11 @@ header {
 .link:hover { background: rgba(255,255,255,0.15); }
 .link.act { background: var(--ac); }
 
-.contenido { max-width: 1200px; margin: 0 auto; padding: 100px 20px 60px; }
-
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+}
 .bloque {
   background: var(--prim); border-radius: var(--radio);
   padding: 24px; margin-bottom: 40px;
@@ -132,34 +138,15 @@ header {
 .m-acciones .cerrar-sec { background: var(--prim); color: var(--osc); }
 
 /* ===== GALERÍA DISRUPTIVA 2010s ===== */
-.galeria-tematica {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  margin-top: 30px;
-}
+.galeria-tematica {  display: flex;  flex-direction: column;  gap: 60px;  margin-top: 30px;}
 
 /* títulos de cada sub-sección */
-.galeria-tematica h3 {
-  font-family: 'Contrail One', sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-  text-align: center;
-  position: relative;
-  color: var(--osc);
+.galeria-tematica h3 {  font-family: 'Contrail One', sans-serif;  font-size: 2rem;  text-transform: uppercase;  
+  letter-spacing: 1px;  margin-bottom: 16px;  text-align: center;  position: relative;  color: var(--osc);
 }
 .galeria-tematica h3::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background: var(--ac);
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
+  content: "";  position: absolute;  width: 60px;  height: 4px;  background: var(--ac);
+  bottom: -8px;  left: 50%;  transform: translateX(-50%);  border-radius: 4px;
 }
 
 /* fondo diferente por tema */
@@ -192,44 +179,19 @@ header {
 }
 
 /* animaciones suaves */
-.cuadro-img figure {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radio);
-  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+.cuadro-img figure {  position: relative;  overflow: hidden;  border-radius: var(--radio);  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
 }
-.cuadro-img figure:hover {
-  transform: rotate(-1deg) scale(1.04);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-}
-.cuadro-img img {
-  filter: saturate(1.1);
-  transition: filter 0.3s, transform 0.3s;
-}
-.cuadro-img figure:hover img {
-  transform: scale(1.1);
-  filter: saturate(1.4);
-}
+.cuadro-img figure:hover {  transform: rotate(-1deg) scale(1.04);  box-shadow: 0 12px 24px rgba(0,0,0,0.25);}
+.cuadro-img img {  filter: saturate(1.1);  transition: filter 0.3s, transform 0.3s;}
+.cuadro-img figure:hover img {  transform: scale(1.1);  filter: saturate(1.4);}
 .cuadro-img figcaption {
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  font-size: 0.85rem;
-  padding: 8px;
-  transition: transform 0.3s ease;
-  transform: translateY(100%);
-}
-.cuadro-img figure:hover figcaption {
-  transform: translateY(0);
-}
+  background: rgba(0,0,0,0.55);  color: #fff;  font-size: 0.85rem;  padding: 8px;  
+  transition: transform 0.3s ease; transform: translateY(100%);}
+.cuadro-img figure:hover figcaption {  transform: translateY(0);}
 
-/* efecto tipo “neón” 2010s */
 .cuadro-img figure:hover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 60%);
-  mix-blend-mode: overlay;
-  pointer-events: none;
+  content: "";  position: absolute;  inset: 0; 
+   background: radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 60%);  mix-blend-mode: overlay;  pointer-events: none;
 }
 
 /* ===== ANIMACIONES ===== */
@@ -237,17 +199,61 @@ header {
 .animar.visible { opacity: 1; transform: none; }
 
 /* ===== FOOTER ===== */
-footer { text-align: center; padding: 12px; background: var(--osc); color: var(--fondo); border-top: 3px solid var(--ac); }
-
-/* ==== POLITICA ==== */
-.grid-politica { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 1.5rem; align-items: start; }
-.columna { display: flex; flex-direction: column; gap: 1rem; }
-.texto-politica {
-  background-color: var(--prim); padding: 1.5rem; border-radius: var(--radio);
-  font-size: 1.1rem; line-height: 1.6; text-align: justify; color: var(--osc);
+footer { 
+  text-align: center; 
+  padding: 12px; 
+  background: var(--osc); 
+  color: var(--fondo); 
+  border-top: 3px solid var(--ac);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-h);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#seccion2 figure img { width: 100%; height: 220px; object-fit: cover; border-radius: var(--radio); }
-#seccion2 figure img:hover { transform: scale(1.05); }
+/* politica */
+
+#seccion2 {  background: linear-gradient(145deg, #f4edaf 0%, #fffdf5 100%);  padding: 60px 30px;
+  border-radius: 16px;  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);}
+
+#seccion2 .titulo-sec {  text-align: center;  font-size: 2.5rem;  color: var(--osc);  font-family: 'Contrail One', sans-serif;
+  margin-bottom: 2.5rem;  position: relative;  letter-spacing: 1px;
+}
+#seccion2 .titulo-sec::after {  content: "";  position: absolute;  bottom: -10px;  left: 50%;  transform: translateX(-50%);  
+  width: 80px;  height: 5px;  background: var(--ac); border-radius: 4px;}
+
+/* ===== ESTRUCTURA DE TRES COLUMNAS ===== */
+.grid-politica {  display: grid;  grid-template-columns: 1fr 1.3fr 1fr;  gap: 2rem;  align-items: start;}
+/* columnas */
+.columna {  display: flex;  flex-direction: column;  gap: 1.25rem;}
+
+#seccion2 figure {  position: relative;  overflow: hidden;  border-radius: var(--radio);  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+#seccion2 figure:hover {  transform: translateY(-6px) scale(1.03);  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);}
+
+#seccion2 figure::after {  content: "";  position: absolute;  inset: 0;  
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.55));  opacity: 0;  transition: opacity 0.3s ease;
+}
+#seccion2 figure:hover::after {  opacity: 1;}
+
+#seccion2 figure img {  width: 100%;  height: 240px;  object-fit: cover;  display: block;  transition: transform 0.4s ease, filter 0.4s ease;}
+#seccion2 figure:hover img {  transform: scale(1.1);  filter: brightness(1.1) contrast(1.05);}
+
+#seccion2 figcaption {  position: absolute;  bottom: 0;  width: 100%;  background: rgba(18, 38, 58, 0.85);  color: #fff;
+  font-size: 0.9rem;  text-align: center;  padding: 8px 10px;  letter-spacing: 0.3px;  font-weight: 500;
+}
+
+/* ===== TEXTO CENTRAL ===== */
+.texto-politica {
+  background: linear-gradient(180deg, #ffffff, #f4edafc2);  border-left: 6px solid var(--ac);  border-radius: 16px;  
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.1);  padding: 1.8rem;  font-size: 1.05rem;  line-height: 1.7;  color: var(--osc); 
+   text-align: justify;  transition: transform 0.3s ease;
+}
+.texto-politica:hover {transform: translateY(-4px);}
 
 /* === MODA === */
 .moda { background-color: var(--prim); padding: 60px 20px; text-align: center; }
@@ -263,8 +269,8 @@ footer { text-align: center; padding: 12px; background: var(--osc); color: var(-
 .texto-moda { color: var(--osc); max-width: 800px; margin: 0 auto; line-height: 1.5; font-size: 1rem; }
 
 /* ===== SOCIEDAD NUEVA ===== */
-.sociedad-nueva { position: relative; overflow: hidden; padding: 0; }
-.sociedad-nueva .titulo-sec {
+.sociedad { position: relative; overflow: hidden; padding: 0; }
+.sociedad .titulo-sec {
   position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
   color: #fff; font-size: 2.4rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.8); z-index: 5;
 }
@@ -279,7 +285,7 @@ footer { text-align: center; padding: 12px; background: var(--osc); color: var(-
 .soc-collage figure { position: absolute; width: 170px; height: 120px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease; }
 .soc-collage figure:hover { transform: scale(1.05); }
 .img-izq-arriba { top: 10%; left: 8%; transform: rotate(-6deg); }
-.img-der-medio { top: 45%; right: 10%; transform: rotate(4deg); }
+.img-der-medio { top: 45%; right: 8%; transform: rotate(4deg); }
 .img-izq-abajo { bottom: 10%; left: 12%; transform: rotate(-3deg); }
 .soc-collage img { width: 100%; height: 100%; object-fit: cover; }
 .soc-collage figcaption { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.55); color: #fff; font-size: 0.8rem; text-align: center; padding: 3px 0; }
@@ -305,45 +311,27 @@ footer { text-align: center; padding: 12px; background: var(--osc); color: var(-
 .rectangulo-economia figure:nth-child(4) { grid-column: 2 / 3; grid-row: 2 / 3; }
 .rectangulo-economia figcaption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(18,38,58,0.7); color: #fff; text-align: center; padding: 8px 0; font-size: 0.9rem; }
 
-/* ===========================================================
-   RESPONSIVE COMPLETO — OPTIMIZADO POR SECCIÓN
-   =========================================================== */
+/* responsive */
 
-/* ---------- TABLET (768–1024px) ---------- */
 @media (max-width:1024px) and (min-width:768px) {
 
-  /* ===== BLOQUES GENERALES ===== */
-  .bloque,
-  .grid-seccion,
-  .grid-moda,
-  .galeria-tematica {
+  .bloque,  .grid-seccion, .grid-moda, .galeria-tematica {
     grid-template-columns: 1fr;
-    gap: 15px;
-  }
+    gap: 15px;}
 
-  .bloque .texto-seccion,
-  .texto-moda {
-    grid-column: 1 / -1;
-    padding: 16px;
-    font-size: 1rem;
+  .bloque .texto-seccion, .texto-moda {
+    grid-column: 1 / -1; padding: 16px; font-size: 1rem;
   }
 
   figure img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: 50% 35%;
+    width: 100%; height: 220px; object-fit: cover; object-position: 50% 35%;
   }
 
-  figure figcaption {
-    font-size: 0.85rem;
-    padding: 6px 0;
-  }
+  figure figcaption {font-size: 0.85rem;padding: 6px 0;}
 
   /* ===== MODA ===== */
   .grid-moda {
-    display: grid;
-    grid-template-areas:
+    display: grid;grid-template-areas:
       "a"
       "b"
       "c"
@@ -351,132 +339,66 @@ footer { text-align: center; padding: 12px; background: var(--osc); color: var(-
     gap: 15px;
   }
 
-  .grid-moda figure {
-    height: 280px;
-  }
+  .grid-moda figure {height: 280px;  }
 
  /* ===== SOCIEDAD ===== */
-  .sociedad-nueva {
-    padding: 40px 20px;
-    position: relative;
-  }
+  .sociedad { padding: 40px 20px; position: relative;  }
 
   .soc-fondo {
-    position: static;
-    width: 100%;
-    height: auto;
-    filter: brightness(0.6);
+    position: static; width: 100%;    height: auto;   filter: brightness(0.6);
   }
 
-  .sociedad-fondo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    min-height: auto;
-  }
+  .sociedad-fondo {  display: flex; flex-direction: column;  align-items: center;  gap: 20px; min-height: auto;  }
 
-  .soc-collage.arco {
-    position: static;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    width: 100%;
-    order: 2;
-  }
+  .soc-collage.arco {    position: static;    display: grid;    grid-template-columns: 1fr 1fr;    gap: 14px;    width: 100%;    order: 2;  }
 
-  .soc-collage figure {
-    position: static;
-    width: 100%;
-    height: 220px;
+  .soc-collage figure {    position: static;    width: 100%;    height: 220px;
   }
 
   .soc-texto-tarjeta {
-    order: 1;
-    background: rgba(255, 255, 255, 0.96);
-    z-index: 2;
-    font-size: 1rem;
-    padding: 18px;
-    text-align: justify;
+    order: 1;    background: rgba(255, 255, 255, 0.96);
+    z-index: 2;    font-size: 1rem;
+    padding: 18px;    text-align: justify;
   }
 
-  .sociedad-nueva .titulo-sec {
-    position: static;
-    text-align: center;
-    color: var(--osc);
-    text-shadow: none;
-    margin-bottom: 10px;
+  .sociedad .titulo-sec {
+    position: static;    text-align: center;    color: var(--osc);    text-shadow: none;    margin-bottom: 10px;
   }
 
 
   /* ===== ECONOMÍA ===== */
-  .rectangulo-economia {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
+  .rectangulo-economia {    display: flex;    flex-direction: column;    gap: 18px;  }
 
-  .texto-economia {
-    order: 1;
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: justify;
-    background: #fffce6;
-    border-radius: 10px;
-    padding: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  .texto-economia {    order: 1;    font-size: 1rem;    line-height: 1.6;
+    text-align: justify;    background: #fffce6;    border-radius: 10px;
+    padding: 18px;    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   .rectangulo-economia figure {
-    order: 2;
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: 12px;
-    overflow: hidden;
+    order: 2;    width: 100%;    aspect-ratio: 4/3;
+    border-radius: 12px;    overflow: hidden;
   }
 
   .rectangulo-economia img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 35%;
-    display: block;
+    width: 100%;    height: 100%;    object-fit: cover;
+    object-position: 50% 35%;    display: block;
   }
 
   .rectangulo-economia figcaption {
-    font-size: 0.9rem;
-    padding: 6px 0;
+    font-size: 0.9rem;    padding: 6px 0;
   }
 }
 
-/* ---------- MÓVIL (hasta 767px) ---------- */
+
 @media (max-width:767px) {
 
-  /* ===== BLOQUES GENERALES ===== */
-  .bloque,
-  .grid-seccion,
-  .grid-moda,
-  .galeria-tematica {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
+  .bloque,  .grid-seccion,  .grid-moda,  .galeria-tematica {    grid-template-columns: 1fr;    gap: 12px;  }
 
-  .bloque .texto-seccion,
-  .texto-moda {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
+  .bloque .texto-seccion,  .texto-moda {    padding: 12px;    font-size: 0.95rem;  }
 
-  figure img {
-    height: 180px;
-    object-fit: cover;
-    object-position: 50% 35%;
-  }
+  figure img {    height: 180px;    object-fit: cover;    object-position: 50% 35%;  }
 
-  figure figcaption {
-    font-size: 0.8rem;
-    padding: 5px 0;
-  }
+  figure figcaption {    font-size: 0.8rem;    padding: 5px 0;  }
 
   /* ===== MODA ===== */
   .grid-moda {
@@ -488,97 +410,46 @@ footer { text-align: center; padding: 12px; background: var(--osc); color: var(-
     gap: 12px;
   }
 
-  .grid-moda figure {
-    height: 220px;
-  }
+  .grid-moda figure {    height: 220px;  }
 
   /* ===== SOCIEDAD ===== */
-  .sociedad-nueva {
-    padding: 30px 15px;
-  }
+  .sociedad {    padding: 30px 15px;  }
 
-  .soc-fondo {
-    position: static;
-    width: 100%;
-    height: auto;
-    filter: brightness(0.55);
-  }
+  .soc-fondo {    position: static;    width: 100%;    height: auto;    filter: brightness(0.55);  }
 
-  .sociedad-fondo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
+  .sociedad-fondo {    display: flex;    flex-direction: column;    align-items: center;    gap: 16px;  }
 
-  .soc-collage.arco {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: static;
-    order: 2;
-    width: 100%;
-  }
+  .soc-collage.arco {    display: flex;    flex-direction: column;    gap: 10px;    position: static;    order: 2;    width: 100%;  }
 
-  .soc-collage figure {
-    position: static;
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
+  .soc-collage figure {    position: static;    width: 100%;    height: 180px;    overflow: hidden;
   }
 
   .soc-texto-tarjeta {
-    order: 1;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 2;
-    padding: 14px;
-    font-size: 0.95rem;
-    text-align: justify;
+    order: 1;    background: rgba(255, 255, 255, 0.95);
+    z-index: 2;    padding: 14px;
+    font-size: 0.95rem;    text-align: justify;
   }
 
-  .sociedad-nueva .titulo-sec {
-    color: var(--prim);
-    text-align: center;
-    margin-bottom: 8px;
-    text-shadow: none;
+  .sociedad .titulo-sec {
+    color: var(--prim);    text-align: center;
+    margin-bottom: 8px;    text-shadow: none;
   }
 
   /* ===== ECONOMÍA ===== */
-  .rectangulo-economia {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+  .rectangulo-economia {   display: flex;    flex-direction: column;   gap: 14px;  }
 
   .texto-economia {
-    order: 1;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    text-align: justify;
-    background: #fffce6;
-    border-radius: 10px;
-    padding: 14px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    order: 1;    font-size: 0.95rem;
+    line-height: 1.5;    text-align: justify;
+    background: #fffce6;    border-radius: 10px;
+    padding: 14px;    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
   }
 
   .rectangulo-economia figure {
-    order: 2;
-    width: 100%;
-    aspect-ratio: 4/3;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+    order: 2;    width: 100%;    aspect-ratio: 4/3;    border-radius: 10px;    overflow: hidden;  }
 
   .rectangulo-economia img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 35%;
-    display: block;
-  }
+    width: 100%;    height: 100%;    object-fit: cover;    object-position: 50% 35%;    display: block;  }
 
-  .rectangulo-economia figcaption {
-    font-size: 0.85rem;
-    padding: 4px 0;
-  }
+  .rectangulo-economia figcaption {    font-size: 0.85rem;    padding: 4px 0;  }
 }
