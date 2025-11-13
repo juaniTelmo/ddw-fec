@@ -1,3 +1,4 @@
+//hecho por telmo, animaciones por reddel
 document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------
   // Animación scrolleo
